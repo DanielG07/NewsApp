@@ -1,5 +1,6 @@
 package com.danielg07.newsapp
 
+import android.content.Intent
 import android.content.pm.PackageManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -28,9 +29,8 @@ class MainActivity : AppCompatActivity() {
             android.Manifest.permission.ACCESS_COARSE_LOCATION);
 
         if (location == PackageManager.PERMISSION_GRANTED) {
-            Snackbar.make(findViewById(R.id.error),
-            "Mostrando noticias",
-            Snackbar.LENGTH_LONG).show()
+            val intent = Intent(this, NewsActivity::class.java)
+            startActivity(intent)
         }
         else {
             requestPermissionLauncher.launch(android.Manifest.permission.ACCESS_COARSE_LOCATION)

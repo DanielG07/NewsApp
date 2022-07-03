@@ -2,14 +2,12 @@ package com.danielg07.newsapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.danielg07.newsapp.databinding.ActivityMainBinding
 import com.danielg07.newsapp.databinding.ActivityNewsBinding
 import com.danielg07.newsapp.network.NewsApi
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import okhttp3.Dispatcher
 
 class NewsActivity : AppCompatActivity() {
 
@@ -19,7 +17,7 @@ class NewsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityNewsBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        getNews()
+        //getNews()
     }
 
     // Se hace la prueba para el consumo de la API - Ejemplo
@@ -31,11 +29,9 @@ class NewsActivity : AppCompatActivity() {
                 "Resultados: ${total.totalResults}",
                 Snackbar.LENGTH_LONG).show()
             runOnUiThread {
-                binding.textView.text = total.articles.toString()
+                //binding.textView.text = total.articles.toString()
             }
 
         }
     }
-
-
 }

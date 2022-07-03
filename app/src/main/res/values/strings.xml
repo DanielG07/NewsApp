@@ -4,6 +4,11 @@
     <string name="nombre_aplicante">Daniel González Jiménez</string>
     <string name="email_aplicante">danielgj7@outlook.com</string>
     <string name="boton_empezar">Empezar</string>
-    <string name="frase_celebre">La tarea se debe plantear difícil, pues sólo la dificultad inspira a los nobles de corazón.</string>
+    <string name="frase_celebre">"La tarea se debe plantear difícil, pues sólo la dificultad inspira a los nobles de corazón."\n\n-SK</string>
     <string name="error_permisos">El usuario denegó los permisos de localización.</string>
+
+    <string name="tab_text_1">IT</string>
+    <string name="tab_text_2">Medio Ambiente</string>
+    <string name="tab_text_3">Android</string>
+
 </resources>

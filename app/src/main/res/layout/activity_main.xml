@@ -56,6 +56,7 @@
         android:layout_marginTop="100dp"
         android:text="@string/error_permisos"
         android:textAlignment="center"
+        android:textColor="@color/red"
         android:visibility="gone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

@@ -11,4 +11,5 @@
     <string name="tab_text_2">Medio Ambiente</string>
     <string name="tab_text_3">Android</string>
 
+    <string name="template_autor_publicador">"%1$s | %2$s"</string>
 </resources>

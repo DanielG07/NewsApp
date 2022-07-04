@@ -20,7 +20,7 @@ private val retrofit = Retrofit.Builder()
     .build()
 
 interface NewsAPIService {
-    @GET("everything?language=es&pageSize=5&page=1&apiKey=4cdd5ed136fa4e10b271eb6f3a50d512")
+    @GET("everything?language=es&pageSize=25&apiKey=4cdd5ed136fa4e10b271eb6f3a50d512")
     suspend fun getNews(@Query("q") topic: String):NewsProperties
 }
 

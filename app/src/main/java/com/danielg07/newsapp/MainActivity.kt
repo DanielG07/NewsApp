@@ -26,15 +26,19 @@ class MainActivity : AppCompatActivity() {
 
     private fun verificarPermisos() {
         val location = ContextCompat.checkSelfPermission(this,
-            android.Manifest.permission.ACCESS_COARSE_LOCATION);
+            android.Manifest.permission.ACCESS_COARSE_LOCATION)
 
         if (location == PackageManager.PERMISSION_GRANTED) {
-            val intent = Intent(this, NewsActivity::class.java)
-            startActivity(intent)
+            nextActivity()
         }
         else {
             requestPermissionLauncher.launch(android.Manifest.permission.ACCESS_COARSE_LOCATION)
         }
+    }
+
+    private fun nextActivity() {
+        val intent = Intent(this, NewsActivity::class.java)
+        startActivity(intent)
     }
 
     val requestPermissionLauncher =
@@ -45,6 +49,7 @@ class MainActivity : AppCompatActivity() {
                 Snackbar.make(findViewById(R.id.error),
                     "Granted",
                     Snackbar.LENGTH_LONG).show()
+                nextActivity()
             } else {
                 binding.error.visibility = View.VISIBLE
                 binding.button.visibility = View.GONE
